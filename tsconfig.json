@@ -1,0 +1,20 @@
+{
+	"compilerOptions": {
+		"module": "CommonJS",
+		"noImplicitAny": true,
+		"removeComments": true,
+		"preserveConstEnums": true,
+		"sourceMap": false,
+		"allowJs": true,
+		"moduleResolution": "Node",
+		"baseUrl": "./src",
+		"paths": {},
+		"alwaysStrict": true,
+		"outDir": "./build"
+	},
+	"ts-node": {
+		// Do not forget to `yarn add -D tsconfig-paths`
+		"require": ["tsconfig-paths/register"]
+	},
+	"include": ["./src/**/*.ts", "./src/**/*.d.ts"]
+}
