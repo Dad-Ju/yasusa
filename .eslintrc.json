@@ -17,7 +17,8 @@
 		"key-spacing": "error",
 		"max-depth": ["error", 4],
 		"complexity": ["off", 2],
-		"prefer-arrow-callback": "error"
+		"prefer-arrow-callback": "error",
+		"no-unused-vars": ["warn"]
 	},
 	"plugins": ["@typescript-eslint"],
 	"extends": [
