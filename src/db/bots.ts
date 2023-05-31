@@ -2,6 +2,7 @@
 /* eslint-disable no-use-before-define */
 import mongoose, { Schema, Types } from 'mongoose'
 import type { ReportType } from './types'
+import { StatsType } from './stats'
 
 export enum BotLevelEnum {
 	'community',
@@ -17,6 +18,7 @@ export type BotType = {
 	moderators: string[]
 	level: BotLevelEnum
 	reports: [Types.ObjectId | ReportType]
+	stats: Types.ObjectId | StatsType
 } & mongoose.Document
 
 export type BotCreatePayload = {
@@ -46,6 +48,7 @@ export const BotSchema = new Schema<BotType, BotModel>(
 			default: BotLevelEnum.community,
 			required: true,
 		},
+		stats: { type: Schema.Types.ObjectId, ref: 'starts', require: false },
 	},
 	{
 		timestamps: { createdAt: true, updatedAt: true },
